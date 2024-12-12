@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirección a REPUVE</title>
+  <script nonce="r5O28HZ5LCJ0Y47CleLRwA">
+    window.google = {};
+    (function() {
+      var d = /^\s*(?!javascript:)(?:[\w+.-]+:|[^:/?#]*(?:[/?#]|$))/i;
+      (this || self).google.navigateTo = function(a, c, b) {
+        !/\/.*?[&?]gsc=1/.test(c.location.href) &&
+        a !== c &&
+        a.google
+          ? (a.google.r && (a.google.r = 0),
+            (a = a.location),
+            (b = d.test(b) ? b : void 0),
+            b !== void 0 && (a.href = b),
+            c.location.replace("about:blank"))
+          : c.location.replace(b);
+      };
+    }).call(this);
+
+    (function() {
+      // Añade el NIV como parámetro a la URL
+      var niv = "WB30G4105NRA25181"; 
+      var baseUrl = "https://www2.repuve.gob.mx:8443/ciudadania/";
+      var redirectUrl = baseUrl + "?niv=" + encodeURIComponent(niv);
+      google.navigateTo(parent, window, redirectUrl);
+    })();
+  </script>
+  <noscript>
+    <meta content="0;url=https://www2.repuve.gob.mx:8443/ciudadania/?niv=WB30G4105NRA25181" http-equiv="refresh">
+  </noscript>
+</head>
+<body>
+  <p>Redirigiendo a REPUVE, espere un momento...</p>
+</body>
+</html>
